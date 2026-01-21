@@ -31,8 +31,8 @@ $books = $koneksi -> query($sql)->fetch_all(MYSQLI_ASSOC);
                     <td><?= $book['pengarang'] ?></td>
                     <td><?= $book['stok'] ?></td>
                     <td>
-                        <a href="edit.php">Edit</a>
-                        <a href="hapus.php">Hapus</a>
+                        <a href="edit.php?id=<?= $book['id'] ?>">Edit</a>
+                        <a href="delete.php?id=<?= $book['id'] ?>">Hapus</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
